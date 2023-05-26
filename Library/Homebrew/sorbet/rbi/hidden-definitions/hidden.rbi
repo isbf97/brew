@@ -7700,6 +7700,12 @@ module Singleton
   def dup(); end
 end
 
+module Singleton::SingletonClassMethods
+  def _load(str); end
+
+  def clone(); end
+end
+
 module Singleton
   def self.__init__(klass); end
 end
@@ -7970,6 +7976,14 @@ class String
   def shellescape(); end
 
   def shellsplit(); end
+
+  def to_nfc(); end
+
+  def to_nfd(); end
+
+  def to_nfkc(); end
+
+  def to_nfkd(); end
 end
 
 class StringScanner
